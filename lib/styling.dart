@@ -76,16 +76,16 @@ class SizeSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
-        padding: const EdgeInsets.only(top: 8.0, left: .5),
+    return const Padding(
+        padding: EdgeInsets.only(top: 8.0, left: .5),
         child: SizedBox(
         width: 300.0,
         child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                ButtonSection(label: "S"),
-                ButtonSection(label: "M"),
-                ButtonSection(label: "L")
+                 ButtonSection(label: "S"),
+                 ButtonSection(label: "M"),
+                 ButtonSection(label: "L")
                    ])));
   }
 }
@@ -131,4 +131,6 @@ class ButtonSection extends StatelessWidget {
         ));
   }
 }
+
+
 
