@@ -1,4 +1,4 @@
-import 'package:capuccino/text_styling.dart';
+import 'package:capuccino/styling.dart';
 import 'package:flutter/material.dart';
 
 
@@ -24,7 +24,7 @@ class ImgDetails extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: EdgeInsets.only(left: 50.0),
+          padding: const EdgeInsets.only(left: 50.0),
           child: Row(children: [
             TextStyling(text: "Cappuccino", 
                 fontWeight: getFontWeightFromContentType("title"), 
@@ -49,34 +49,28 @@ class ImgDetails extends StatelessWidget {
                Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(children: [
-                    const Icon(Icons.star,
-                        size: 19.0, color: Color.fromARGB(255, 212, 186, 14)),
-                    TextStyling(text: "4.8", fontWeight: getFontWeightFromContentType("title"),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom:.5),
+                    child: Row(children: [
+                      const Icon(Icons.star,
+                          size: 19.0, color: Color.fromARGB(255, 212, 186, 14)),
+                      TextStyling(text: "4.8",
+                        fontWeight: getFontWeightFromContentType("title"),
                         fontColor: getColorFromSectionType("title"),
-                      fontSize: 15.0,),
-                    TextStyling(text: " (230)",
-                        fontWeight: getFontWeightFromContentType("body"),
-                        fontColor: getColorFromSectionType("body")),
-                  ])
+                        fontSize: 15.0,),
+                      TextStyling(text: " (230)",
+                          fontWeight: getFontWeightFromContentType("body"),
+                          fontColor: getColorFromSectionType("body")),
+                    ]),
+                  )
                 ],
               ),
               const Column(
                 children: [SizedBox(width: 80)],
               ),
-              Container(
-                  width: 45.0,
-                  decoration: BoxDecoration(
-                      color: Colors.grey[100],
-                      borderRadius: BorderRadius.circular(15)),
-                  child: Image.asset("assets/images/bean.png", width: 8.0)),
+              const SideImageStyling(imageUrl: "assets/images/bean.png"),
               const SizedBox(width: 18.0),
-              Container(
-                  width: 45.0,
-                  decoration: BoxDecoration(
-                      color: Colors.grey[100],
-                      borderRadius: BorderRadius.circular(15)),
-                  child: Image.asset("assets/images/milk.png", width: 8.0)),
+              const SideImageStyling(imageUrl: "assets/images/milk.png"),
             ],
           ),
         ),

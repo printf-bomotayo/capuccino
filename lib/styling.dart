@@ -52,3 +52,20 @@ FontWeight getFontWeightFromContentType(String sectionName) {
       return FontWeight.normal;
   }
 }
+
+class SideImageStyling extends StatelessWidget {
+  const SideImageStyling({super.key,
+  required this.imageUrl});
+
+  final String imageUrl;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        width: 45.0,
+        decoration: BoxDecoration(
+            color: Colors.grey[100],
+            borderRadius: BorderRadius.circular(15)),
+        child: Image.asset(imageUrl, width: 8.0));
+  }
+}
