@@ -48,6 +48,18 @@ class DescriptionSection extends StatelessWidget {
               )
             ],
           )),
+      Padding(
+        padding: const EdgeInsets.only(left: 50.0, top: 10),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            TextStyling(text: "Size", fontWeight: getFontWeightFromContentType("title"),
+                fontColor: getColorFromSectionType("title"),
+            fontSize: 15.0,),
+
+          ],
+        ),
+      ),
     ]);
   }
 }

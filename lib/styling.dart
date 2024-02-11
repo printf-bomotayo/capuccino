@@ -69,3 +69,66 @@ class SideImageStyling extends StatelessWidget {
         child: Image.asset(imageUrl, width: 8.0));
   }
 }
+
+
+class SizeSection extends StatelessWidget {
+  const SizeSection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return  Padding(
+        padding: const EdgeInsets.only(top: 8.0, left: .5),
+        child: SizedBox(
+        width: 300.0,
+        child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                ButtonSection(label: "S"),
+                ButtonSection(label: "M"),
+                ButtonSection(label: "L")
+                   ])));
+  }
+}
+
+
+class ButtonSection extends StatelessWidget {
+  const ButtonSection({super.key, required this.label });
+
+  final String label;
+
+  Color setBtnBgColor() {
+    if(label == 'M') {
+      return const Color.fromARGB(104, 210, 184, 174);
+    }
+    return Colors.white;
+  }
+
+  Color setBtnBorderColor() {
+    if(label == 'M') {
+      return const Color.fromARGB(218, 144, 65, 36);
+    }
+    return Colors.grey;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        width: 80.0,
+        height: 35.0,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+            color: setBtnBgColor(),
+            border: Border.all(
+                style: BorderStyle.solid, color: setBtnBorderColor()),
+            borderRadius: BorderRadius.circular(10)),
+        child: Text(
+          label,
+          textAlign: TextAlign.center,
+          style: const TextStyle(
+            fontFamily: "Sora",
+            fontSize: 14.0,
+          ),
+        ));
+  }
+}
+
