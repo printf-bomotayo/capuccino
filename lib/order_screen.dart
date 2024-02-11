@@ -1,6 +1,5 @@
 import 'package:capuccino/description_section.dart';
 import 'package:capuccino/img_section.dart';
-import 'package:capuccino/price_section.dart';
 import 'package:capuccino/styling.dart';
 import 'package:flutter/material.dart';
 
@@ -17,9 +16,8 @@ class OrderDetails extends StatelessWidget {
             const CoffeeImage(imageUrl: "assets/images/coffee_img.jpg"),
             const ImgDetails(),
             SizedBox(height: 40, width: 250, child: Divider(color: Colors.grey.shade300)),
-            DescriptionSection(),
-            SizeSection(),
-            PriceSection(),
+            const DescriptionSection(),
+            const SizeSection(),
           ],
         )
     );
