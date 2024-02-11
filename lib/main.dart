@@ -1,4 +1,5 @@
 import 'package:capuccino/app_bar_section.dart';
+import 'package:capuccino/full_order_details_screen.dart';
 import 'package:flutter/material.dart';
 
 
@@ -23,7 +24,7 @@ class CappuccinoApp extends StatelessWidget {
             centerTitle: true,),
           body: Column(
             children: [
-
+              OrderDetails(),
             ],
           ),
         ),

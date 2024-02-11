@@ -28,15 +28,14 @@ class TextStyling extends StatelessWidget {
 }
 
 
-Color getColorFromName(String colorName) {
-  switch (colorName) {
-    case 'red':
-      return Colors.red;
-    case 'blue':
-      return Colors.blue;
-    case 'green':
-      return Colors.green;
-  // add more cases as needed
+Color getColorFromSectionType(String sectionName) {
+  switch (sectionName) {
+    case 'body':
+      return Colors.grey;
+    case 'title':
+      return Colors.black;
+    case 'others':
+      return const Color.fromARGB(218, 144, 65, 36);
     default:
       return Colors.black;
   }
